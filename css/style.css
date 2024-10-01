@@ -36,17 +36,20 @@
   .sidebar{
     background-color: #000000;
     width: 50px;
+    height: calc(100vh - 100px);
+    overflow-y: hidden;
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
-    color: white;
+    color: #A3A3A3;
+    justify-content: space-between;
   }
 
   .library{
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex-grow: 1;
+    
   }
 
   .logo{
@@ -65,19 +68,82 @@
     width: 25px;
   }
 
-  .icon-div>.span{
+  .icon-div1>.span, .icon-div2>.span, .icon-div3>.span{
     display: none;
+  }
+
+  .icon-div1:hover, .icon-div2:hover, .icon-div3:hover{
+    color: white;
+    border-left: 3px solid #ADFF2F;
+  }
+
+  .playlist-container{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
+    padding-top: 20px;
+    display: none;
+  }
+
+  .button-container{
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+  }
+
+  .button-container>.text{
+    padding-left: 10px;
+  }
+
+  .add-button{
+    background-color: #D2D2D2;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .fa-plus{
+    color: black;
+  }
+
+  .list-container{
+    width: 100%;
+    flex-shrink: 1;
+    overflow-y: auto;
+  }
+
+  .playlist-container>.title{
+    color: white;
+  }
+
+  .playlist-list{
+    list-style: none;
+    width: 100%;
+  }
+
+  .playlist-list>li{
+    padding: 8px 0;
+  }
+
+  .playlist-list>li:hover, .button-container:hover>.text, .download-container>.span:hover{
+    color: white;
+  }
+
+  .button-container:hover>.add-button{
+    background-color: white;
   }
 
   .profile{
     height: 80px;
-    flex-shrink: 0;
     text-align: center;
   }
 
   .profile-container{
     border-radius: 50%;
-    background-color: grey;
+    background-color: #A3A3A3;
     width: 30px;
     height: 30px;
     display: flex;
@@ -87,11 +153,39 @@
 
   .download-img{
     height: 15px;
+    margin-right: 10px;
+  }
+
+  .download-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 15px;
+  }
+
+  .download-container>.span{
+    display: none;
+    font-size: 14px;
   }
 
   .profile-img{
     height: 20px;
+  }
+
+  .profile-hr{
+    border-color: #A3A3A3;
+    display: none;
+  }
+
+  .user-container{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+  }
+
+  .user-container>.span{
+    margin-left: 10px;
+    display: none;
   }
 
   /* # CONTENT */
@@ -111,10 +205,21 @@
     height: 100px;
     width: 100%;
     background-color: #282828;
+    z-index: 1;
   }
 
 
   /* # RESPONSIVE */
+
+  @media screen and (max-height: 680px){
+
+    .list-container{
+      height: calc(25vh);
+    }
+
+  }
+
+
 
   @media screen and (min-width: 552px){
 
@@ -123,7 +228,7 @@
     }
 
     .side-container{
-      width: 180px;
+      width: 170px;
     }
 
     .small-logo{
@@ -135,16 +240,43 @@
       height: 40px;
     }
 
-    .icon-div{
+    .icon-div1, .icon-div2, .icon-div3{
       display: flex;
       align-items: center;
     }
 
-    .icon-div>.span{
+    .icon-div1>.span, .icon-div2>.span,.icon-div3>.span{
       display: inline;
       padding-left: 10px;
     }
     
+    .playlist-container{
+      display: block;
+    }
 
+    .download-container>.span{
+      display: inline;
+    }
+
+    .download-container{
+      justify-content: start;
+    }
+
+    .user-container>.span{
+      display: inline;
+      color: white;
+    }
+
+    .user-container{
+      padding-top: 10px;
+    }
+    
+    .profile-hr{
+      display: block;
+    }
+
+    .profile{
+      height: 90px;
+    }
 
   }
