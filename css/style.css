@@ -11,8 +11,7 @@
   .container {
     margin: 0 auto;
     padding: 0 10px;
-    width: 1000px;
-    max-width: 100%;
+    width: 100%;
   }
 
   .side-container {
@@ -191,13 +190,6 @@
     display: none;
   }
 
-  /* # CONTENT */
-
-  .content{
-    background-color: #141922;
-    flex-grow: 1;
-  }
-
   /* # HEADER */
 
   .header{
@@ -225,6 +217,87 @@
     height: 55px;
     width: 210px;
   }
+
+
+  /* # CONTENT */
+
+  .content{
+    background-color: #141922;
+    flex-grow: 1;
+    color: #A3A3A3;
+    height: calc(100vh - 100px);
+    overflow-y: auto;
+  }
+
+  .musical-genres{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 40px;
+    column-gap: 10px;
+    padding-top: 20px;
+  }
+
+  .musical-genres>p{
+    font-size: 14px;
+  }
+
+  .recently-pleyed-container{
+    padding-top: 30px;
+    overflow-y: auto;
+  }
+
+  .recently-pleyed-container>.title{
+    padding-bottom: 20px;
+    color: white;
+  }
+
+  .card-container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 4%;
+    row-gap: 10%;
+  }
+
+  .card{
+    width: 48%;
+    text-align: center;
+    height: 18%;
+  }
+
+  .card>h3{
+    color: white;
+    padding: 10px 0;
+  }
+
+  .img{
+    width: 100%;
+  }
+
+  .round{
+    border-radius: 50%;
+  }
+
+  .card-container>h2, .card-container>h3{
+    padding-bottom: 20px;
+  }
+
+  .card-container>h2{
+    color: white;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
 
   /* # FOOTER */
   .footer{
