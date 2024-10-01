@@ -86,13 +86,13 @@
     display: none;
   }
 
-  .button-container{
+  .playlist-container .button-container{
     display: flex;
     align-items: center;
     padding: 10px 0;
   }
 
-  .button-container>.text{
+  .playlist-container .button-container>.text{
     padding-left: 10px;
   }
 
@@ -128,11 +128,11 @@
     padding: 8px 0;
   }
 
-  .playlist-list>li:hover, .button-container:hover>.text, .download-container>.span:hover{
+  .playlist-list>li:hover, .playlist-container .button-container:hover>.text, .download-container>.span:hover{
     color: white;
   }
 
-  .button-container:hover>.add-button{
+  .playlist-container .button-container:hover>.add-button{
     background-color: white;
   }
 
@@ -190,17 +190,40 @@
 
   /* # CONTENT */
 
-
   .content{
     background-color: #141922;
     flex-grow: 1;
   }
 
+  /* # HEADER */
+
   .header{
     background-color: #0C0F14;
     height: 100px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
   }
 
+  .header>.button-container{
+    padding-right: 20px;
+  }
+
+  .header>.button-container>.button{
+    border: 1px solid white;
+    background-color: #0C0F14;
+    color: white;
+    border-radius: 25px;
+    height: 50px;
+    width: 200px;
+  }
+
+  .header>.button-container>.button:hover{
+    height: 55px;
+    width: 210px;
+  }
+
+  /* # FOOTER */
   .footer{
     height: 100px;
     width: 100%;
