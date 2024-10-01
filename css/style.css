@@ -15,6 +15,13 @@
     max-width: 100%;
   }
 
+  .side-container {
+    margin: 0 auto;
+    padding: 5px 0;
+    width: 30px;
+    max-width: 100%;
+  }
+
 
   .main{
     display: flex;
@@ -22,13 +29,75 @@
     width: 100%;
   }
 
-  .small-col{
+
+
+  /* # SIDEBAR */
+
+  .sidebar{
     background-color: #000000;
     width: 50px;
     flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    color: white;
   }
 
-  .big-col{
+  .library{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+  }
+
+  .logo{
+    display: none;
+  }
+
+  .icon-container{
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .icon{
+    padding: 2px 0;
+    width: 25px;
+  }
+
+  .icon-div>.span{
+    display: none;
+  }
+
+  .profile{
+    height: 80px;
+    flex-shrink: 0;
+    text-align: center;
+  }
+
+  .profile-container{
+    border-radius: 50%;
+    background-color: grey;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .download-img{
+    height: 15px;
+    margin-bottom: 15px;
+  }
+
+  .profile-img{
+    height: 20px;
+  }
+
+  /* # CONTENT */
+
+
+  .content{
     background-color: #141922;
     flex-grow: 1;
   }
@@ -45,13 +114,37 @@
   }
 
 
-  /* # DESKTOP */
+  /* # RESPONSIVE */
 
-  @media screen and (min-width: 900px){
+  @media screen and (min-width: 552px){
 
-    .small-col{
+    .sidebar{
       width: 200px;
     }
+
+    .side-container{
+      width: 180px;
+    }
+
+    .small-logo{
+      display: none;
+    }
+
+    .logo{
+      display: inline;
+      height: 40px;
+    }
+
+    .icon-div{
+      display: flex;
+      align-items: center;
+    }
+
+    .icon-div>.span{
+      display: inline;
+      padding-left: 10px;
+    }
+    
 
 
   }
