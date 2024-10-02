@@ -15,7 +15,6 @@
   }
 
   .side-container {
-    margin: 0 auto;
     padding: 5px 0;
     width: 30px;
     max-width: 100%;
@@ -75,6 +74,10 @@
   .icon{
     padding: 2px 0;
     width: 25px;
+  }
+
+  .icon-div1, .icon-div2, .icon-div3, .playlist-container, .profile{
+    padding: 0 1rem;
   }
 
   .icon-div1>.span, .icon-div2>.span, .icon-div3>.span{
@@ -145,6 +148,7 @@
   .profile{
     height: 80px;
     text-align: center;
+    width: 100%;
   }
 
   .profile-container{
@@ -244,6 +248,7 @@
 
   .musical-genres>p:hover{
     color: white;
+    border-bottom: 3px solid #ADFF2F;
   }
 
   .musical-genres>p{
@@ -273,7 +278,6 @@
     position: relative;
     width: 48%;
     text-align: center;
-    height: 18%;
   }
 
   .card>h3{
@@ -287,27 +291,39 @@
     display: block;
   }
 
-  .card .play-button {
+  .img-container{
+    position: relative;
+  }
+
+  .overlay{
     position: absolute;
-    top: 43%;
-    left: 50%;
-    transform: translate(-50%, -46%);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .play-button {
+    display: none;
     color: white;
     background-color: transparent;
     border: 3px solid white;
     border-radius: 50%;
-    padding: 15px;
-    display: none; 
     height: 50px;
     width: 50px;
   }
   
-  .card:hover .play-button {
-    display: block;
+  .card:hover .overlay{
+    background-color: black;
+    opacity: 0.5;
   }
-  
-  .card:hover img {
-    opacity: 0.7; 
+
+  .card:hover .play-button{
+    display: block;
+    opacity: 1;
   }
 
   .round{
