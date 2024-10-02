@@ -394,7 +394,8 @@
     justify-content: space-evenly;
     align-items: center;
     width: 80%;
-    padding-top: 30px;
+    padding-top: 10px;
+    padding-bottom: 15px;
   }
 
   .play-container{
@@ -425,12 +426,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 20px;
+    height: 20px;
+    
   }
 
 
   .audio1{
     display: block;
+    position: relative;
+    top: 8px;
     height: 5px;
     width: 90%;
     background-color: #5A5A5A;
@@ -441,7 +445,7 @@
   .audio2{
     display: block;
     position: relative;
-    bottom: 5px;
+    top: 3px;
     height: 5px;
     right: 38%;
     width: 15%;
@@ -450,36 +454,39 @@
     z-index: 1;
   }
 
-  .circle1{
-    display: none;
+  .audio-button1{
+    height: 12px;
+    width: 12px;
     position: relative;
-    bottom: 15px;
+    bottom: 5px;
     right: 30%;
-    color: white;
+    display: none;
+    background-color: white;
+    border-radius: 50%;
     z-index: 3;
   }
 
-  .circle2{
+  .audio-button2{
+    height: 12px;
+    width: 12px;
     display: none;
     position: relative;
-    bottom: 15px;
+    bottom: 8px;
     left: 9%;
-    color: white;
+    background-color: white;
+    border-radius: 50%;
     z-index: 3;
   }
 
 
-  .audio2:hover, .volume2:hover{
+  .audio-container:hover .audio2, .volume-container:hover .volume2{
     background-color: #ADFF2F;
   }
 
-  .audio2:hover>.circle1{
+  .audio-container:hover .audio-button1, .volume-container:hover .audio-button2{
     display: block;
   }
 
-  .volume2:hover>.circle2{
-    display: block;
-  }
 
   .elements-container{
     display: flex;
@@ -492,8 +499,9 @@
 
   .volume-container{
     width: 50%;
-    padding-top: 25px;
-    padding-left: 5%;
+    padding-left: 10px;
+    height: 20px;
+    padding-top: 4px;
   }
 
   .fa-list-ul, .fa-tv, .fa-volume{
@@ -503,6 +511,8 @@
 
   .volume1{
     display: block;
+    position: relative;
+    top: 5px;
     height: 5px;
     width: 80%;
     background-color: #5A5A5A;
@@ -514,7 +524,6 @@
     display: block;
     position: relative;
     height: 5px;
-    bottom: 5px;
     right: 5%;
     width: 15%;
     background-color: white;
